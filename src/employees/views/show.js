@@ -2,6 +2,9 @@ import React,{useState,useEffect} from "react";
 import { useParams } from "react-router-dom";
 import '../views/show.css'
 import axios from "axios";
+
+import {  Button, TrashIcon } from 'evergreen-ui'
+
 const Show=()=>{
 
 
@@ -10,7 +13,17 @@ const Show=()=>{
     useEffect(async ()=>{
         const  response =await axios.get(process.env.REACT_APP_BACKEND_API+'/employees/'+id)
         setEmployees(response.data)
-    })
+    },[])
+
+    const deleteProfile= async ()=>{
+
+         await axios.delete(process.env.REACT_APP_BACKEND_API+'/employees/'+id)
+
+        window.alert("Profile deleted")
+
+        window.location = "/employees/create"
+    }
+
     return (
         <div className="container emp-profile">
             <form method="post">
@@ -48,16 +61,15 @@ const Show=()=>{
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <input type="submit" className="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        <button className="btn btn-danger" onClick={deleteProfile}> Delete</button>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-4">
                         <div className="profile-work">
                             <p>WORK LINK</p>
-                            <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
+                            <a href="www.sanketapatel.com">Website Link</a><br/>
+
                             <p>SKILLS</p>
                             <a href="">Web Designer</a><br/>
                             <a href="">Web Developer</a><br/>

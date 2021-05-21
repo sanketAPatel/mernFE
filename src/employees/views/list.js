@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 
 import EmployeeCard from "../components/EmployeeCard";
+import {Pane} from "evergreen-ui";
+import {Alert} from "bootstrap";
 
 
 
@@ -21,11 +23,14 @@ const List=()=>{
             <div className="row">
                 <div className="col-12">
 
-
+                        <br/>
                         <div className="alert alert-primary" role="alert">
-                            <h1>no of Employees  in list are:-{getEmployees.employees.length}</h1>
-                        </div>
 
+                           <h1 class='text-center'> Total # of Employees:- {getEmployees.employees.length}</h1>
+
+
+                        </div>
+                    <br/>
                     <EmployeeCard employees={getEmployees.employees}/>
                 </div>
 
