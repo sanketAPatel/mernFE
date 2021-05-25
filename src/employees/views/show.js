@@ -19,7 +19,7 @@ const Show=()=>{
 
          await axios.delete(process.env.REACT_APP_BACKEND_API+'/employees/'+id)
 
-        window.alert("Profile deleted")
+        alert("Profile deleted")
 
         window.location = "/employees/create"
     }
@@ -61,7 +61,7 @@ const Show=()=>{
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <button className="btn btn-danger" onClick={deleteProfile}> Delete</button>
+                        <a  href='#'  className="btn btn-danger" onClick={deleteProfile}> Delete</a>
                     </div>
                 </div>
                 <div className="row">
