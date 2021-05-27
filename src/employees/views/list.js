@@ -12,7 +12,7 @@ const List=()=>{
 
     const [getEmployees ,setEmployees]=useState({employees:[]})
     useEffect(async  ()=>{
-     const  response=await axios.get('${process.env.REACT_APP_BACKEND_API}/employees')
+     const  response=await axios.get(process.env.REACT_APP_BACKEND_API+'/employees')
         setEmployees(response.data);
 
          },[])
