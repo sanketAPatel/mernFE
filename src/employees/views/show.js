@@ -21,12 +21,12 @@ const Show=()=>{
 
         alert("Profile deleted")
 
-        window.location = "/employees/create"
+        window.location = "/employees/"
     }
 
     return (
         <div className="container emp-profile">
-            <form method="post">
+
                 <div className="row">
                     <div className="col-md-4">
                         <div className="profile-img">
@@ -61,7 +61,10 @@ const Show=()=>{
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <a  href='#'  className="btn btn-danger" onClick={deleteProfile}> Delete</a>
+                        <button type="button"   onClick={deleteProfile}>
+                            Remove
+                        </button>
+
                     </div>
                 </div>
                 <div className="row">
@@ -126,7 +129,7 @@ const Show=()=>{
                         </div>
                     </div>
                 </div>
-            </form>
+
         </div>
     );
 }
