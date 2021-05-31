@@ -11,14 +11,12 @@ if(props.dataTable.length >0){
 
             <div className="col-12">
                 <br></br>
-                <Table >
+                <Table  striped bordered hover>
                     <thead>
-
                     <tr><td>Name</td>
                         <td>Location</td>
                     </tr>
                     </thead>
-
                     {
                         props.dataTable.map(department =>{
                         return(

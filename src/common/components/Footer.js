@@ -24,7 +24,7 @@ const Footer =()=>{
                         </MDBContainer>
                         <div className="footer-copyright text-center py-3">
                             <MDBContainer fluid>
-                                &copy; {new Date().getFullYear()} Copyright: <a href="https://www.sanketapatel.com"> sanketapatel.com </a>
+                                &copy; {new Date().getFullYear()} Copyright: <a href="http://www.sanketapatel.com"> sanketapatel.com </a>
                             </MDBContainer>
                         </div>
                     </MDBFooter>

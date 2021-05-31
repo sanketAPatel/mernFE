@@ -24,7 +24,7 @@ import DepartmentsUpdate from './departments/views/update'
 import DepartmentsCreate from './departments/views/create'
 import DepartmentsList from './departments/views/list'
 import DepartmentsShow from './departments/views/show'
-
+import HomePage from "./common/components/HomePage";
 
 
 
@@ -42,7 +42,17 @@ function App() {
                <Switch>
 
                    <Route path="/" exact >
-                            <h1>this is the  main page </h1>
+                       <div className="container">
+                           <div className="row">
+                                    <HomePage/>
+                               <div className="col-12">
+                                   <br></br>
+
+
+
+                               </div>
+                           </div>
+                       </div>
                    </Route>
 
                    <Route path='/employees' exact>
